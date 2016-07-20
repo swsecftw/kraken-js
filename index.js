@@ -46,6 +46,7 @@ module.exports = function (options) {
     debug('kraken options\n', options);
 
     app = express();
+    app.disable('x-powered-by');
     app.once('mount', function onmount(parent) {
         var start, error, promise;
 
